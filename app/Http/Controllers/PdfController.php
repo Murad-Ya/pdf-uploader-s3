@@ -27,7 +27,7 @@ class PdfController extends Controller
         } catch (\Exception $exception) {
             return response()->json([
                 'error' => $exception->getMessage()
-            ]);
+            ], 500);
         }
     }
 }
